@@ -2,11 +2,13 @@ package com.example.optimisticg;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class HowDoesItCost {
 
 
-    private static List<String> oListAll1Dollar;
+    private final List<String> oListAll1Dollar;
+
 
     public HowDoesItCost(){
 
@@ -22,11 +24,8 @@ public class HowDoesItCost {
        //systemoprinto l ' indice di 0ind
          //systemoprinto cost
 
-        if (oListAll1Dollar.get(oIndex) ==  cost){
-            //systemoprinto cost
-            return true;
-        }
-        return false;
+        //systemoprinto cost
+        return Objects.equals(oListAll1Dollar.get(oIndex), cost);
 
 
     }
